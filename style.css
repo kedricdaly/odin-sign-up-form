@@ -1,50 +1,114 @@
+:root {
+    --bg-color: rgba(249, 250, 251, 0.8);
+    --emphasis-color: rgba(226, 172, 110, 1);
+    --emphasis-dark: rgb(206, 157, 1);
+    --emphasis-bg: rgba(24, 46, 44, 1)
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 main {
     display: flex;
-    flex-flow: row no-wrap;
+    flex-flow: row nowrap;
     width: 100vw;
     height: 100vh;
 }
 
+/* Image side */
+
 .bg-img {
-    background-image: url(./martin-marek--y9T0XDEUYo-unsplash.jpg);
+    background-image: url(./assets/martin-marek--y9T0XDEUYo-unsplash.jpg);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 50vw;
+    display: flex;
+    justify-content: center;
 }
 
-.right-side {
+.logo-container {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+[class^=fb-dummy] {
+    display: flex;
+    width: 100%;
+}
+
+/* changing ratios of fb-dummy-1 and -2 allows for
+having the logo not be centered via flexbox */
+
+.fb-dummy-1 {
+    flex-grow: 1;
+}
+
+.fb-dummy-2 {
+    flex-grow: 3.5;
 }
 
 .logo {
     display: flex;
+    flex-flow: row;
     align-items: center;
     justify-content: center;
+    background-color: rgba(30, 30, 30, 0.3);
+    width: 100%;
 }
 
 .logo>img {
-    height: max(30vh, 60px)
+    height: max(20vh, 60px)
 }
 
 .logo-text {
-    color: white;
+    color: var(--emphasis-color);
+    font-size: max(5vh, 40px)
 }
 
 .bg-img-footer {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
+    color: white;
+    font-size: small;
+}
+
+.bg-img-footer a {
+    color:white
+}
+
+/* Form side */
+
+.right-side {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.copy-text {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .form-inputs {
     display: flex;
     flex-flow: column;
+    background-color: white;
+    padding-bottom: 20px;
+    min-width: 0;
+    min-height: 20vh;
 }
 
 .form-inputs>[class$=_info] {
@@ -54,6 +118,45 @@ main {
     align-items: center;
 }
 
+.form-inputs>[class$=_info]>ul li {
+    color: var(--emphasis-color);
+    font-weight: bold;
+}
+
+.short-tag {
+    padding: 20px;
+    font-style: italic;
+    color: var(--emphasis-bg);
+}
+
+
+
+.form-inputs label {
+    font-size: small;
+
+}
+
+.form-inputs li {
+    list-style-type: none;
+}
+
+input[type="submit"] {
+    margin: 20px;
+    padding: 10px 20px;
+    color: var(--emphasis-color);
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--emphasis-bg);
+}
+
+input[type="submit"]:hover {
+
+    color: var(--emphasis-bg);
+    background-color: var(--emphasis-color);
+}
+
+/* Below form */
+
 .have-account {
     display: flex;
     margin: 10px;
@@ -62,10 +165,43 @@ main {
 .fake-anchor {
     margin-left: 10px;
     font-weight: bold;
+    color: var(--emphasis-dark);
 
 }
 
 .fake-anchor:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+        text-align: center;
+    }
+    
+    .bg-img {
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        background-position: 0 -50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .logo>img {
+        height: max(60px, 10vh);
+    }
+
+    .bg-img-footer, .bg-img-footer a{
+        color: var(--emphasis-bg)
+    }
+
+    .right-side {
+        flex-flow: column;
+    }
 }
