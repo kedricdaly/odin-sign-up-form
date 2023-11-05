@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TOP - Sign-up Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <main>
+    <div class="bg-img">
+      
+      <div class="logo-container">
+        <div class="fb-dummy-1"></div>
+        <div class="logo">
+          <img src="./assets/odin-lined.png" alt="The Odin Project logo outlined in white">
+          <h1 class="logo-text">Summit</h1>
+        </div>
+        <div class="fb-dummy-2"></div>
+      </div>
+      
+      <footer class="bg-img-footer">
+        Photo by <a href="https://unsplash.com/@martys111?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Marek</a> on <a href="https://unsplash.com/photos/a-view-of-a-mountain-range-covered-in-fog--y9T0XDEUYo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </footer>
+    </div>
+    
+    <div class="right-side">
+      <div class="copy-text">
+        <p>This is not a real online service!</p>
+        
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste facere possimus repellat voluptatem deserunt
+          perferendis cum quasi fugiat, minima, aperiam reiciendis tempore inventore illum mollitia facilis commodi qui
+          omnis. Architecto.
+        </p>
+        <p class="tagline">Are you ready to take the next step to reach your summit? Sign up now to get started. </p>
+      </div>
+      <div class="form-content">
+        <form action="#" id="sign-up-form">
+            <div class="form-inputs">
+              <div class="short-tag">Reach your summit</div>
+              <div class="name_info">
+                <ul>
+                  <li><label for="first_name">
+                    <span aria-label="required">*</span>FIRST NAME</label></li>
+                  <li>
+                    <input type="text" name="first_name" id="first_name" required
+                    placeholder="Thor">
+                  </li>
+                </ul>
+                <ul>
+                  <li><label for="last_name">
+                    <span aria-label="required">*</span>LAST NAME</label></li>
+                  <li>
+                    <input type="text" name="last_name" id="last_name" required
+                      placeholder="Odinson">
+                  </li>
+                </ul>
+              </div>
+              <div class="contact_info">
+                <ul>
+                  <li><label for="email">
+                    <span aria-label="required">*</span>EMAIL</label></li>
+                  <li>
+                    <input type="email" name="email" id="email" required
+                      placeholder="hello@summit.com">
+                  </li>
+                </ul>
+                <ul>
+                  <li><label for="phone_number">PHONE NUMBER</label></li>
+                  <li>
+                    <input type="tel" name="phone_number" id="phone_number"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                      placeholder="555-555-5555"> <!-- https://www.abstractapi.com/guides/validate-phone-number-javascript-->
+                  </li>
+                </ul>
+              </div>
+              <div class="pw_info">
+                <ul>
+                  <li><label for="password">
+                    <span aria-label="required">*</span>PASSWORD</label></li>
+                  <li>
+                    <input type="password"
+                      name="password" id="password" minlength=8
+                      required
+                      placeholder="password">
+                  </li>
+                </ul>
+                <ul>
+                  <li><label for="pw_confirm">
+                    <span aria-label="required">*</span>CONFIRM PASSWORD</label></li>
+                  <li>
+                    <input type="password" name="pw_confirm" id="pw_confirm" minlength=8
+                      required
+                      placeholder="password">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <span style="visibility:hidden" class="pw_notify">Passwords do not match</span>
+            </div>
+          <input type="submit" value="Create Account">
+        </form>
+        <div class="have-account">
+          <div>Already have an account?</div>
+          <div class="fake-anchor">Log in</div> <!--not a working link-->
+        </div>
+      </div>
+      
+    </div>
+      
+    
+  </main>
+
+</body>
