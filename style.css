@@ -11,10 +11,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: flex;
+}
+
 main {
     display: flex;
     flex-flow: row nowrap;
-    width: 100vw;
+    min-width: 100vw;
     height: 100vh;
 }
 
@@ -64,12 +68,12 @@ having the logo not be centered via flexbox */
 }
 
 .logo>img {
-    height: max(20vh, 60px)
+    height: max(min(20vh, 20vw), 60px)
 }
 
 .logo-text {
     color: var(--emphasis-color);
-    font-size: max(5vh, 40px)
+    font-size: max(min(5vh, 5vw), 40px)
 }
 
 .bg-img-footer {
@@ -129,11 +133,8 @@ having the logo not be centered via flexbox */
     color: var(--emphasis-bg);
 }
 
-
-
 .form-inputs label {
     font-size: small;
-
 }
 
 .form-inputs li {
@@ -147,15 +148,40 @@ input[type="submit"] {
     border: 0px;
     border-radius: 5px;
     background-color: var(--emphasis-bg);
+    box-shadow: none !important;
 }
 
 input[type="submit"]:hover {
-
     color: var(--emphasis-bg);
     background-color: var(--emphasis-color);
 }
 
-/* Below form */
+/* input validation */
+
+/* input:invalid {
+    box-shadow: 0 0 5px 1px red;
+} */
+
+/* https://stackoverflow.com/a/48144022 */
+input:not(:placeholder-shown):invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+input:focus {
+    outline: 2px solid var(--emphasis-color);
+    box-shadow: none !important;
+}
+
+input:focus:invalid {
+    box-shadow: none;
+}
+
+input:valid {
+    box-shadow: 0 0 5px 1px green;
+}
+
+
+/* below form */
 
 .have-account {
     display: flex;

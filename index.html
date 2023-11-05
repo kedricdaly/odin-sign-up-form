@@ -44,32 +44,59 @@
               <div class="short-tag">Reach your summit</div>
               <div class="name_info">
                 <ul>
-                  <li><label for="first_name">FIRST NAME</label></li>
-                  <li><input type="text" name="first_name" id="first_name"></li>
+                  <li><label for="first_name">
+                    <span aria-label="required">*</span>FIRST NAME</label></li>
+                  <li>
+                    <input type="text" name="first_name" id="first_name" required
+                    placeholder="Thor">
+                  </li>
                 </ul>
                 <ul>
-                  <li><label for="last_name">LAST NAME</label></li>
-                  <li><input type="text" name="last_name" id="last_name"></li>
+                  <li><label for="last_name">
+                    <span aria-label="required">*</span>LAST NAME</label></li>
+                  <li>
+                    <input type="text" name="last_name" id="last_name" required
+                      placeholder="Odinson">
+                  </li>
                 </ul>
               </div>
               <div class="contact_info">
                 <ul>
-                  <li><label for="email">EMAIL</label></li>
-                  <li><input type="text" name="email" id="email"></li>
+                  <li><label for="email">
+                    <span aria-label="required">*</span>EMAIL</label></li>
+                  <li>
+                    <input type="email" name="email" id="email" required
+                      placeholder="hello@summit.com">
+                  </li>
                 </ul>
                 <ul>
                   <li><label for="phone_number">PHONE NUMBER</label></li>
-                  <li><input type="text" name="phone_number" id="phone_number"></li>
+                  <li>
+                    <input type="tel" name="phone_number" id="phone_number"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                      placeholder="(555)555-5555"> <!-- https://www.abstractapi.com/guides/validate-phone-number-javascript-->
+                  </li>
                 </ul>
               </div>
               <div class="pw_info">
                 <ul>
-                  <li><label for="password">PASSWORD</label></li>
-                  <li><input type="password" name="password" id="password"></li>
+                  <li><label for="password">
+                    <span aria-label="required">*</span>PASSWORD</label></li>
+                  <li>
+                    <input type="password"
+                      name="password" id="password" minlength=8
+                      required
+                      placeholder="password">
+                  </li>
                 </ul>
                 <ul>
-                  <li><label for="pw_confirm">CONFIRM PASSWORD</label></li>
-                  <li><input type="password" name="pw_confirm" id="pw_confirm"></li>
+                  <li><label for="pw_confirm">
+                    <span aria-label="required">*</span>CONFIRM PASSWORD</label></li>
+                  <li>
+                    <input type="password" name="pw_confirm" id="pw_confirm" minlength=8
+                      required
+                      placeholder="password">
+                  </li>
                 </ul>
               </div>
             </div>
