@@ -149,6 +149,7 @@ input[type="submit"] {
     border-radius: 5px;
     background-color: var(--emphasis-bg);
     box-shadow: none !important;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
@@ -163,8 +164,12 @@ input[type="submit"]:hover {
 } */
 
 /* https://stackoverflow.com/a/48144022 */
-input:not(:placeholder-shown):invalid {
-    box-shadow: 0 0 5px 1px red;
+.error, input:not(:placeholder-shown):invalid {
+    box-shadow: 0 0 5px 1px red !important;
+}
+
+#pw_confirm:placeholder-shown {
+    box-shadow: 0;
 }
 
 input:focus {
@@ -176,10 +181,15 @@ input:focus:invalid {
     box-shadow: none;
 }
 
-input:valid {
+input:valid:not(:placeholder-shown) {
     box-shadow: 0 0 5px 1px green;
 }
 
+.pw_notify {
+    color:red;
+    font-size: small;
+    margin-left: 20px;
+}
 
 /* below form */
 

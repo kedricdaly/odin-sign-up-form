@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
+  <script src="script.js" defer></script>
+
 </head>
 <body>
   <main>
@@ -74,7 +76,7 @@
                   <li>
                     <input type="tel" name="phone_number" id="phone_number"
                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                      placeholder="(555)555-5555"> <!-- https://www.abstractapi.com/guides/validate-phone-number-javascript-->
+                      placeholder="555-555-5555"> <!-- https://www.abstractapi.com/guides/validate-phone-number-javascript-->
                   </li>
                 </ul>
               </div>
@@ -99,6 +101,9 @@
                   </li>
                 </ul>
               </div>
+            </div>
+            <div>
+              <span style="visibility:hidden" class="pw_notify">Passwords do not match</span>
             </div>
           <input type="submit" value="Create Account">
         </form>
